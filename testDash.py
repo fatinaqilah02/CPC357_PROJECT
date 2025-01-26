@@ -95,7 +95,7 @@ app.layout = html.Div([
 def update_dashboard(n):
     try:
         data = get_data()
-        print(f"Number of records retrieved: {len(data)}")  # Debugging print
+        #print(f"Number of records retrieved: {len(data)}")  # Debugging print
         
         # Extract the latest data point
         latest_data = data[0] if data else {}
@@ -175,13 +175,13 @@ def update_dashboard(n):
                     name='Dry Waste',
                     x=daily_counts.index.astype(str),
                     y=daily_counts['Dry Waste'],
-                    marker_color='#FF9999'
+                    marker_color='#f1c232'
                 ),
                 go.Bar(
                     name='Wet Waste',
                     x=daily_counts.index.astype(str),
                     y=daily_counts['Wet Waste'],
-                    marker_color='#66B2FF'
+                    marker_color='#e69138'
                 )
             ],
             'layout': go.Layout(
